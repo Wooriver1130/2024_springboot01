@@ -77,13 +77,13 @@ public class SampleController {
   /*               dataVO.setResultCode(1);
                 dataVO.setMsg("성공");
                 dataVO.setData(list); */
-                return dataVO.success(list, "성공");
+                return DataVO.success(list, "성공");
             }else {
 /*                 dataVO.setResultCode(0);
                 dataVO.setMsg("실패");
                 dataVO.setData(null); */
                 
-                return dataVO.fail(0, "실패");
+                return DataVO.fail(0, "실패");
             }
         }
         
