@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+
 
 
 @RestController
@@ -86,6 +88,17 @@ public class SampleController {
                 return DataVO.fail(0, "실패");
             }
         }
+        @PostMapping("/hi")
+        public String sayHi1( String idx) {
+            return "hi, 안녕하세요, 방가방가";
+        }
+        
+        @PostMapping("/hi2")
+        public String[]  sayHi2( String idx) {
+            return new String[] {"hello", "words"};
+        }
+        
+        
         
     }
     
